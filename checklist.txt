@@ -5,5 +5,10 @@ start file should be named launch.sh
 remove any pause logic at the end of launch.sh, start_server.sh will handle the restart loop
 
 add .env file with following params
-SERVER_PATH path to server folder w.r.t. docker-compose.yml.
+SERVER_PATH [string] (required)
+    path to server folder w.r.t. docker-compose.yml.
     e.g. if the .yml file and server are in the same directory this should be SERVER_PATH=./divine-journey-2
+RESTART_CONTAINER_ON_STOP [1,0] (optional, default 1)
+    if 1 this will allow the server script to exit (shutting down the container) on a server stop.
+    restart is set to 'unless-stopped' in the docker-compose so the container will come back up.
+    if 0 (or anything besides 1) this will cause the script to restart the server itself without bringing the container down

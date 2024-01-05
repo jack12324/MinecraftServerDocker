@@ -13,3 +13,5 @@ services:
     volumes:
       - ${SERVER_PATH}:/server
     restart: unless-stopped
+    environment:
+      - RESTART_CONTAINER_ON_STOP=${RESTART_CONTAINER_ON_STOP:-1}

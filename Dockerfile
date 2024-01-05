@@ -1,5 +1,13 @@
 FROM openjdk:8
-COPY ./jack_start_server.sh ./server
 USER root
-WORKDIR /server
-CMD  ./jack_start_server.sh
+COPY ./jack_start_server.sh /loaded/
+COPY ./eula.txt /loaded/
+WORKDIR ./server
+
+RUN apt-get update && \
+    apt-get install dos2unix && \
+    apt-get clean
+
+CMD cp ../loaded/* . && dos2unix ./launch.sh && ./jack_start_server.sh
+
+
