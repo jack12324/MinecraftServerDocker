@@ -11,5 +11,5 @@ services:
     ports:
       - "25565:25565"
     volumes:
-      - ./test:/server
+      - ${SERVER_PATH}:/server
     restart: unless-stopped
