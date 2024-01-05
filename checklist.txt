@@ -1,0 +1,5 @@
+If java has permission issues try cp -r on server folder on windows
+
+start file should be named launch.sh
+
+remove any pause logic at the end of launch.sh, start_server.sh will handle the restart loop

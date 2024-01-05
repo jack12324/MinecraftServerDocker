@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  mc:
+    user: root
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
+    ports:
+      - "25565:25565"
+    volumes:
+      - ./test:/server
+    restart: unless-stopped
