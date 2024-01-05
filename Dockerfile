@@ -2,6 +2,7 @@ FROM openjdk:8
 USER root
 COPY ./jack_start_server.sh /loaded/
 COPY ./eula.txt /loaded/
+COPY ./ops.json /loaded/
 WORKDIR ./server
 
 RUN apt-get update && \
