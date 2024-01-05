@@ -15,3 +15,6 @@ services:
     restart: unless-stopped
     environment:
       - RESTART_CONTAINER_ON_STOP=${RESTART_CONTAINER_ON_STOP:-1}
+      - RCON_ENABLED=${RCON_ENABLED:-1}
+      - RCON_PORT=${RCON_PORT:-25575}
+      - RCON_PASSWORD=${RCON_PASSWORD}

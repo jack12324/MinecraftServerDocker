@@ -2,6 +2,15 @@
 echo "RESTART_CONTAINER_ON_STOP is set to $RESTART_CONTAINER_ON_STOP"
 while true 
 do
+	if [ "$RCON_ENABLED" -eq "1" ]
+	then
+    echo "Enabling rcon"
+    if ! python3 setupRcon.py
+    then
+      echo "Enabling rcon failed"
+      break
+    fi
+  fi
 	echo "Starting launch.sh"
 	./launch.sh
 	if [ "$RESTART_CONTAINER_ON_STOP" -eq "1" ]
