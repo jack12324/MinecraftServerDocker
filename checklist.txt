@@ -20,4 +20,7 @@ RCON_PASSWORD [string] (required if RCON_ENABLED is 1)
     password to access server via RCON
 RWA_PASSWORD [string] (required)
     password for admin user to access web ui
+TZ [ubuntu timezone] (optional)
+    sets the timezone for the rcon service, which will affect any scheduled commands
+    see https://manpages.ubuntu.com/manpages/focal/man3/DateTime::TimeZone::Catalog.3pm.html for valid timezones
 

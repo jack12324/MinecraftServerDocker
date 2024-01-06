@@ -28,5 +28,6 @@ services:
       - RWA_PASSWORD=${RWA_PASSWORD:?error}
       - RWA_RCON_HOST=server
       - RWA_RCON_PASSWORD=${RCON_PASSWORD}
+      - TZ=${TZ}
 
 
