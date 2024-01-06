@@ -4,3 +4,4 @@
 !Dockerfile
 !*.sh
 !*.json
+!*.py

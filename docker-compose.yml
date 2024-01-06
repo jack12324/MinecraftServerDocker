@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  mc:
+  server:
     user: root
     build:
       context: .
@@ -18,3 +18,15 @@ services:
       - RCON_ENABLED=${RCON_ENABLED:-1}
       - RCON_PORT=${RCON_PORT:-25575}
       - RCON_PASSWORD=${RCON_PASSWORD}
+  rcon:
+    image: itzg/rcon
+    restart: unless-stopped
+    ports:
+      - "4326:4326"
+      - "4327:4327"
+    environment:
+      - RWA_PASSWORD=${RWA_PASSWORD:?error}
+      - RWA_RCON_HOST=server
+      - RWA_RCON_PASSWORD=${RCON_PASSWORD}
+
+

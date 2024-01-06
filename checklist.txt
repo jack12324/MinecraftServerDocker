@@ -16,5 +16,8 @@ RCON_ENABLED [1,0] (optional, default 1)
     set 1 to enable server management via RCON
 RCON_PORT [number] (optional, default 25575)
     the port RCON access will be mapped to
-RCON_PASSWORD [string] (recuired if RCON_ENABLED is 1)
+RCON_PASSWORD [string] (required if RCON_ENABLED is 1)
     password to access server via RCON
+RWA_PASSWORD [string] (required)
+    password for admin user to access web ui
+
