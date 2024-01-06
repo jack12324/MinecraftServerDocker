@@ -5,7 +5,7 @@ services:
     user: root
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./server/Dockerfile
     stdin_open: true
     tty: true
     ports:

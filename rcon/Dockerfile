@@ -1,8 +1,7 @@
 FROM itzg/rcon
 
 #path is from compose file
-COPY ./rcon/injectRestart.js .
-COPY ./rcon/default-widgets.json .
+COPY ./rcon/preload/* .
 
 ENTRYPOINT []
 
