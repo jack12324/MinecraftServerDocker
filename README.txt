@@ -2,7 +2,7 @@ To run:
 edit server start file to be named launch.sh
 remove any pause logic at the end of launch.sh, the image will handle the restart loop
 add .env file to this folder with the required params (below)
-run docker compose up
+run docker compose up --build
 
 SERVER_PATH [string] (required)
     path to server folder w.r.t. docker-compose.yml.
