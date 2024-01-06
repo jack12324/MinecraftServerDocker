@@ -23,7 +23,7 @@ services:
     restart: unless-stopped
     ports:
       - "4326:4326"
-      - "4327:4327"
+#      - "4327:4327"
     environment:
       - RWA_PASSWORD=${RWA_PASSWORD:?error}
       - RWA_RCON_HOST=server
