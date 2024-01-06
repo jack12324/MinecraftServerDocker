@@ -1,0 +1,123 @@
+{
+  "list": [
+    {
+      "id": "rwa-console",
+      "position": 0,
+      "size": "large",
+      "options": {
+      },
+      "storage": {}
+    },
+    {
+      "id": "rwa-timedcommands",
+      "position": 1,
+      "size": "large",
+      "options": {},
+      "storage": {
+        "commands": {
+          "Restart": {
+            "name": "Restart",
+            "command": "/stop",
+            "minutes": [
+              "30"
+            ],
+            "hours": [
+              "20"
+            ],
+            "weekdays": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6"
+            ],
+            "active": "yes"
+          },
+          "Restart warn 30 minutes": {
+            "name": "Restart warn 30 minutes",
+            "command": "/say Server will restart in 30 minutes",
+            "minutes": [
+              "0"
+            ],
+            "hours": [
+              "20"
+            ],
+            "weekdays": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6"
+            ],
+            "active": "yes"
+          },
+          "Restart warn 10 minutes": {
+            "name": "Restart warn 10 minutes",
+            "command": "/say Server will restart in 10 minutes",
+            "minutes": [
+              "20"
+            ],
+            "hours": [
+              "20"
+            ],
+            "weekdays": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6"
+            ],
+            "active": "yes"
+          },
+          "Restart warn 5 minutes": {
+            "name": "Restart warn 5 minutes",
+            "command": "/say Server will restart in 5 minutes, this will take around 15 minutes",
+            "minutes": [
+              "25"
+            ],
+            "hours": [
+              "20"
+            ],
+            "weekdays": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6"
+            ],
+            "active": "yes"
+          },
+          "Restart final warning": {
+            "name": "Restart final warning",
+            "command": "/say Server is about to restart. This will take around 15 minutes",
+            "minutes": [
+              "29"
+            ],
+            "hours": [
+              "20"
+            ],
+            "weekdays": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6"
+            ],
+            "active": "yes"
+          }
+        },
+        "commands.lifetime": -1
+      }
+    }
+  ]
+}

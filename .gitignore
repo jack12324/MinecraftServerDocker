@@ -5,3 +5,6 @@
 !*.sh
 !*.json
 !*.py
+!*.js
+!rcon
+!server

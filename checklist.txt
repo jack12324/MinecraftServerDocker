@@ -23,4 +23,8 @@ RWA_PASSWORD [string] (required)
 TZ [ubuntu timezone] (optional)
     sets the timezone for the rcon service, which will affect any scheduled commands
     see https://manpages.ubuntu.com/manpages/focal/man3/DateTime::TimeZone::Catalog.3pm.html for valid timezones
+RESTART_HOUR [number] (optional, default 3)
+    hour server will restart
+RESTART_MINUTE [number] (optional, default 30)
+    minute server will restart
 
