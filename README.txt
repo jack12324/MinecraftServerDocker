@@ -1,10 +1,9 @@
-If java has permission issues try cp -r on server folder on windows
+To run:
+edit server start file to be named launch.sh
+remove any pause logic at the end of launch.sh, the image will handle the restart loop
+add .env file to this folder with the required params (below)
+run docker compose up
 
-start file should be named launch.sh
-
-remove any pause logic at the end of launch.sh, start_server.sh will handle the restart loop
-
-add .env file with following params
 SERVER_PATH [string] (required)
     path to server folder w.r.t. docker-compose.yml.
     e.g. if the .yml file and server are in the same directory this should be SERVER_PATH=./divine-journey-2
@@ -20,7 +19,7 @@ RCON_PASSWORD [string] (required if RCON_ENABLED is 1)
     password to access server via RCON
 RWA_PASSWORD [string] (required)
     password for admin user to access web ui
-TZ [ubuntu timezone] (optional)
+TZ [ubuntu timezone] (optional, default: standard time)
     sets the timezone for the rcon service, which will affect any scheduled commands
     see https://manpages.ubuntu.com/manpages/focal/man3/DateTime::TimeZone::Catalog.3pm.html for valid timezones
 RESTART_HOUR [number] (optional, default 3)
@@ -28,3 +27,4 @@ RESTART_HOUR [number] (optional, default 3)
 RESTART_MINUTE [number] (optional, default 30)
     minute server will restart
 
+If java has permission issues try cp -r on server folder on windows
