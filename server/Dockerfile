@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:21
 USER root
 COPY ./server/preload/* /loaded/
 WORKDIR ./server
