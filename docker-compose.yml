@@ -6,6 +6,8 @@ services:
     build:
       context: .
       dockerfile: ./server/Dockerfile
+      args:
+        - JAVA_VERSION=$JAVA_VERSION
     stdin_open: true
     tty: true
     ports:

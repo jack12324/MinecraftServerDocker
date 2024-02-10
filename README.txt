@@ -4,6 +4,8 @@ remove any pause logic at the end of launch.sh, the image will handle the restar
 add .env file to this folder with the required params (below)
 run docker compose up --build
 
+JAVA_VERSION [int] (required)
+    version of openjdk to install
 SERVER_PATH [string] (required)
     path to server folder w.r.t. docker-compose.yml.
     e.g. if the .yml file and server are in the same directory this should be SERVER_PATH=./divine-journey-2
