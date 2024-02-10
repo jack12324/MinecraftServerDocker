@@ -13,6 +13,8 @@ RCON_WEB_PORT [int] (required)
     This is the port the RCON web gui will run on.
 RCON_WEBHOOK_PORT [int] (required)
     This is the port the RCON webhook will run on. MUST be RCON_WEB_PORT + 1
+PORT [int] (optional, default 25565)
+    This is the port that the server will be accessable on. You will likely need to forward this port on your router
 RESTART_CONTAINER_ON_STOP [1,0] (optional, default 1)
     if 1 this will allow the server script to exit (shutting down the container) on a server stop.
     restart is set to 'unless-stopped' in the docker-compose so the container will come back up.
