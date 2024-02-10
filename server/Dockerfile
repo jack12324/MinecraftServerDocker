@@ -7,7 +7,6 @@ WORKDIR ./server
 RUN apt-get update && \
     apt-get install dos2unix -y && \
     apt-get install python3 -y && \
-    apt search openjdk && \
     apt-get install openjdk-$JAVA_VERSION-jre -y && \
     apt-get clean
 
