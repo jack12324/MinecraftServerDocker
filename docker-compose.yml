@@ -27,8 +27,8 @@ services:
       dockerfile: ./rcon/Dockerfile
     restart: unless-stopped
     ports:
-      - "4326:4326"
-      - "4327:4327"
+      - "${RCON_WEB_PORT}:${RCON_WEB_PORT}"
+      - "${RCON_WEBHOOK_PORT}:${RCON_WEBHOOK_PORT}"
     environment:
       - RWA_PASSWORD=${RWA_PASSWORD:?error}
       - RWA_RCON_HOST=server
@@ -36,5 +36,6 @@ services:
       - TZ=${TZ}
       - RESTART_HOUR=${RESTART_HOUR:-4}
       - RESTART_MINUTE=${RESTART_MINUTE:-30}
+      - RCON_WEB_PORT=${RCON_WEB_PORT}
 
 

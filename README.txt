@@ -9,6 +9,10 @@ JAVA_VERSION [int] (required)
 SERVER_PATH [string] (required)
     path to server folder w.r.t. docker-compose.yml.
     e.g. if the .yml file and server are in the same directory this should be SERVER_PATH=./divine-journey-2
+RCON_WEB_PORT [int] (required)
+    This is the port the RCON web gui will run on.
+RCON_WEBHOOK_PORT [int] (required)
+    This is the port the RCON webhook will run on. MUST be RCON_WEB_PORT + 1
 RESTART_CONTAINER_ON_STOP [1,0] (optional, default 1)
     if 1 this will allow the server script to exit (shutting down the container) on a server stop.
     restart is set to 'unless-stopped' in the docker-compose so the container will come back up.
